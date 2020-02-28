@@ -12,7 +12,7 @@
 
 - 点击`文件 --> 偏好设置` , 然后找到`图像`，按照下图进行配置
 
-![image-20200221103822418](./typora + GitHub 的使用手册.assets/image-20200221103822418.png)
+![image-20200221103822418](./typora + GitHub 的使用手册 （包括git初始化）.assets/image-20200221103822418.png)
 
 - 然后重启软件即可
 
@@ -26,12 +26,12 @@
 - 在记笔记的文件夹处右键打开 `git bash here`
 - 输入 `git init` 便可以看到生成了  `.git`文件夹
 
-![image-20200221104857928](./typora + GitHub 的使用手册.assets/image-20200221104857928.png)
+![image-20200221104857928](./typora + GitHub 的使用手册 （包括git初始化）.assets/image-20200221104857928.png)
 
 
 - 然后需要配置我们自己的 git username 和 email
 
-![image-20200221105105575](./typora + GitHub 的使用手册.assets/image-20200221105105575.png)
+![image-20200221105105575](./typora + GitHub 的使用手册 （包括git初始化）.assets/image-20200221105105575.png)
 
 
 - 创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
