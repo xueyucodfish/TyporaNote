@@ -1,4 +1,4 @@
-# typora + GitHub 的使用手册 （包括git初始化）
+# typora + GitHub 的使用手册 
 
 ## typora
 
