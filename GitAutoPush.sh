@@ -5,9 +5,7 @@ echo "放弃有道云的利器 GitAutoPush Starting..."
 time=$(date "+%Y-%m-%d %H:%M:%S")
 git add .
 
-msg = "auto commit"
-
-#read -t 30 -p "请输入提交注释:" msg
+read -t 30 -p "请输入提交注释:" msg
 
 if  [ ! "$msg" ] ;then
     echo "[commit message] 默认提交, 提交人: $(whoami), 提交时间: ${time}"
