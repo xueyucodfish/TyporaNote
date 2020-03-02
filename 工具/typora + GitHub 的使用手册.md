@@ -88,4 +88,3 @@ fi
 git push origin master
 ~~~
 
-![image-20200302111314661](.pics/image-20200302111314661.png)
