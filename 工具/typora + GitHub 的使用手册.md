@@ -12,7 +12,7 @@
 
 - 点击`文件 --> 偏好设置` , 然后找到`图像`，按照下图进行配置
 
-![image-20200221103822418](./typora + GitHub 的使用手册.assets/image-20200221103822418.png)
+![image-20200221103822418](.pics/image-20200221103822418.png)
 
 - 然后重启软件即可
 
@@ -26,12 +26,12 @@
 - 在记笔记的文件夹处右键打开 `git bash here`
 - 输入 `git init` 便可以看到生成了  `.git`文件夹
 
-![image-20200221104857928](./typora + GitHub 的使用手册.assets/image-20200221104857928.png)
+![image-20200221104857928](.pics/image-20200221104857928.png)
 
 
 - 然后需要配置我们自己的 git username 和 email
 
-![image-20200221105105575](./typora + GitHub 的使用手册.assets/image-20200221105105575.png)
+![image-20200221105105575](.pics/image-20200221105105575.png)
 
 
 - 创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
@@ -45,7 +45,7 @@
 - 登陆GitHub，打开“Account settings”，“SSH Keys and GPG keys”页面：
 然后，点“New SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容即可。
 
-![image-20200221111717118](./typora + GitHub 的使用手册.assets/image-20200221111717118.png)
+![image-20200221111717118](.pics/image-20200221111717118.png)
 
 - 为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。
 当然，GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公司提交，一会儿在家里提   交，只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。
@@ -87,3 +87,5 @@ fi
 	
 git push origin master
 ~~~
+
+![image-20200302111314661](.pics/image-20200302111314661.png)
