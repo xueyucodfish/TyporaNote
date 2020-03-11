@@ -1,3 +1,5 @@
+
+
 # typora + GitHub 的使用手册 
 
 ## typora
@@ -64,6 +66,14 @@ git remote add origin git@github.com:MachinePlay/Gittest.git
 # 上面中的 #! 是一种约定标记, 它可以告诉系统这个脚本需要什么样的解释器来执行;
 
 git pull origin master
+~~~
+
+注意：如果已经存在的有文件的话记得先 add 然后 commit 一下。 避免踩坑。
+
+~~~shell
+git add .
+
+git commit -m "auto commit"
 ~~~
 
 ~~~shell
