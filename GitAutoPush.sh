@@ -15,7 +15,7 @@ git add .
 #	git commit -m "$msg, 提交人: $(whoami), 提交时间: ${time}"
 #fi
 echo "auto commit, 提交人: doc, 提交时间: ${time}"
-git commit -m "auto commit, 提交人: $(whoami), 提交时间: ${time}"
+git commit -m "auto commit, 提交人: doc, 提交时间: ${time}"
 	
 git push origin master
 echo "放弃有道云的利器 GitAutoPush Ending..."
