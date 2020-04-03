@@ -80,8 +80,37 @@ echo file_get_contents($url);
 > 选用 python 的原因是因为头条的数据需要生成报表，用 python 的一些库更方便，也很容易接入现在的系统。
 
 ~~~ python
+def refreshToken():
+    db = genericDB.genericDB(confinfo)
+    db.connect()
+    sql = "select refreshToken, apisec as secret from ad_schpc_account where accountid = 401"
+    ret = db.sqlFetchAll(sql)
+    secret = ret[0]['secret']
+    refreshToken = ret[0]['refreshToken']
+    open_api_url_prefix = "https://ad.oceanengine.com/open_api/"
+    uri = "oauth2/refresh_token/"
+    url = open_api_url_prefix + uri
+    data = {
+        "app_id": 1661499893228551,
+        "secret": secret,
+        "grant_type": "refresh_token",
+        "refresh_token": refreshToken
+    }
+    rsp = requests.post(url, json=data ,verify=False)
+    rsp_data = rsp.json()
+    db.close()
+    return rsp_data
 
+def saveToken(secret, refreshToken):
+    db = genericDB.genericDB(confinfo)
+    db.connect()
+    sql = "update ad_schpc_account set refreshToken = '%s' , accessToken = '%s' where accountid = '401'" % (
+        refreshToken , secret)
+    db.sqlExec(sql)
+    db.commit()
+    db.close()
 ~~~
+> 由于平台限制原因，头条的每个账号都需要到其指定的链接去获取authToken，本想实现三个Token的自动获取更新，但由于这个原因只能手动获取一下authToken然后每天进行刷新来实现Token的新鲜。
 
 
 # Q & A
